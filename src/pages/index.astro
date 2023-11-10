@@ -1,24 +1,11 @@
 ---
-// 引入外部css
-import '../styles/global.css';
-// 定义变量
-const pageTitle = "我的 Astro 站点";
+// 布局组件
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Greeting from '../components/Greeting.jsx';
+const pageTitle = "首页";
 ---
-
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{pageTitle}</title>
-	</head>
-	<body>
-  <!-- 导航 -->
-	<a href="/">首页</a>
-	<a href="/about/">关于</a>
-	<a href="/blog/">博客</a>
-		<!-- 主体 -->
-		<h1>{pageTitle}</h1>
-	</body>
-</html>
+<!-- 传递属性 -->
+<BaseLayout pageTitle={pageTitle}>
+  <h2>My awesome blog subtitle</h2>
+  <Greeting client:load messages={["Hej", "Hallo", "Hola", "Habari"]} />
+</BaseLayout>

@@ -6,11 +6,10 @@ import BlogPost from '../components/BlogPost.astro';
 // 收集所有的blog信息
 const allPosts = await Astro.glob('../pages/posts/*.md');
 // 定义变量
-const pageTitle = "我的 Astro 学习博客";
+const pageTitle = "My Blog";
 ---
 <!-- 传递属性 -->
 <BaseLayout pageTitle={pageTitle}>
-  <p>这是我的 Astro 学习笔记</p>
   <ul>
     <!-- 动态生成文章列表 -->
     {allPosts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} />)}

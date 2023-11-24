@@ -11,4 +11,4 @@ tags: ["astro"]
 ---
 ## Something todo
 - I will list something to do and explain why I do it
-- The first I will do is learn network. Specifically,I will be reading several books
+- The first I will do is learn 《Computer Science: An Overview》

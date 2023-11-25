@@ -7,7 +7,6 @@ author: 'mayfly'
 image:
     url: 'https://docs.astro.build/assets/full-logo-light.png'
     alt: 'The full Astro logo.'
-cover: "./a.jpeg"
 tags: ["Computer Science: An Overview"]
 ---
 - 探讨计算机科学所涉及的领域，介绍其历史背景
